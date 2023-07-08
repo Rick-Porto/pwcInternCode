@@ -90,4 +90,22 @@ public class StringManipulation {
 		return result.toString();
 	}
 
+	// Verificar se a string é um anagrama de um palíndromo - Desafio 05
+	public static boolean isAnagramOfPalindrome(String input) {
+		int[] charCount = new int[26];
+
+		for (char c : input.toCharArray()) {
+			charCount[c - 'a']++;
+		}
+
+		int oddCount = 0;
+
+		for (int count : charCount) {
+			if (count % 2 != 0) {
+				oddCount++;
+			}
+		}
+
+		return oddCount <= 1;
+	}
 }

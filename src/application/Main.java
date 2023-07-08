@@ -5,7 +5,6 @@ import entities.StringManipulation;
 public class Main {
 
 	public static void main(String[] args) {
-
 		// Desafio 01
 		String string = "Hello, World! OpenAI is amazing.";
 		String reversedWords = StringManipulation.reverseWords(string);
@@ -29,7 +28,10 @@ public class Main {
 		System.out.println("");
 		System.out.println("Desafio 04: \n" + upperFirstLetter);    
 		
-		
-		
+		//Desafio 05
+		String string5 = "racecar";
+		boolean isAnagramOfPalindrome = StringManipulation.isAnagramOfPalindrome(string5);
+		System.out.println("");
+		System.out.println("Desafio 05: \n" + isAnagramOfPalindrome);    
 	}
 }
