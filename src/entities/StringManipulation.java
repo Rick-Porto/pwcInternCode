@@ -66,4 +66,28 @@ public class StringManipulation {
 		return input.substring(start, start + maxLength);
 	}
 
+	// Colocar no maiúsculo a primeira letra de cada frase - Desafio 04
+	public static String upperFirstLetter(String input) {
+		StringBuilder result = new StringBuilder(input.length());
+		boolean upperNext = true;
+
+		for (char c : input.toCharArray()) {
+			if (Character.isLetter(c)) {
+				if (upperNext) {
+					result.append(Character.toUpperCase(c));
+					upperNext = false;
+				} else {
+					result.append(Character.toLowerCase(c));
+				}
+			} else {
+				result.append(c);
+				if (c == '.' || c == '?' || c == '!') {
+					upperNext = true;
+				}
+			}
+		}
+
+		return result.toString();
+	}
+
 }

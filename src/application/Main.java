@@ -23,6 +23,13 @@ public class Main {
 		System.out.println("");
 		System.out.println("Desafio 03: \n" + longestPalindromeSubstring);
 		
+		//Desafio 04
+		String string4 = "hello how are you? i'm fine, thank you.";
+		String upperFirstLetter = StringManipulation.upperFirstLetter(string4);
+		System.out.println("");
+		System.out.println("Desafio 04: \n" + upperFirstLetter);    
+		
+		
 		
 	}
 }
